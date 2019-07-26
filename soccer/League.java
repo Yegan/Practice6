@@ -1,49 +1,36 @@
 package soccer;
-//import java.util.*;
+import utility.GameUtils;
 
 public class League{
-
+    
     public static void main(String[] args){
     
         Team[] theTeams = createTeams();
         Game[] theGames = createGames(theTeams);
         Game currGame = theGames[0];
 
-       
-        // Player player1 = new Player();
-        // player1.playerName = "George Eliot";
+        // Determine how many goals will be scored
+        int numberOfGoals = (int)(Math.random()*7); 
 
-        // Player player2 = new Player();
-        // player2.playerName = "Graham Green";
-
-        // Player player3 = new Player();
-        // player3.playerName = "Geoffrey Chaucer";
-
-        // Player[] thePlayers = {player1, player2, player3};
-        
-        // Goal goal1 = new Goal();
-        // goal1.thePlayer = currGame.homeTeam.playerArray[1];
-        // goal1.theTeam = currGame.homeTeam;
-       // goal1.theTime = 55;
-
-        
-       // currGame.goals = theGoals;
-
-        int numberOfGoals = (int)(Math.random()*7);
-        
-        
+        // Create a place to store the goals that will be scored
         Goal[] theGoals = new Goal[numberOfGoals];
+        
+        // Assign the place where the goals will be to the game
         currGame.goals = theGoals;
-        // GameUtils.addGameGoals(currGame);
+
+        //System.out.println(currGame.goals.length);
+       // if(currGoal.goals == currGoal.goals){
+        GameUtils.addGameGoals(currGame);
         for(Goal currGoal: currGame.goals){
            System.out.println(currGoal.theTime + "mins by");
            System.out.println(currGoal.thePlayer.playerName);
            System.out.println(" of "+ currGoal.theTeam.teamName);  
         }
+        //}
+        
        // System.out.println(theGoals.length);
      //   System.out.println("Goal scored after "+ /* currGame.goals[0].theTime*/ + " mins by "+ /*currGame.goals[0].thePlayer.playerName + " of "+ currGame.goals[0].theTeam.teamName*/);
-    } 
-
+    }
     
         public static Team[] createTeams(){
             Team team1 = new Team();
