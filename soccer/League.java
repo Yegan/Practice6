@@ -9,27 +9,13 @@ public class League{
         Game[] theGames = createGames(theTeams);
         Game currGame = theGames[0];
 
-        // Determine how many goals will be scored
-        int numberOfGoals = (int)(Math.random()*7); 
+        currGame.playGame();
 
-        // Create a place to store the goals that will be scored
-        Goal[] theGoals = new Goal[numberOfGoals];
-        
-        // Assign the place where the goals will be to the game
-        currGame.goals = theGoals;
-
-        //System.out.println(currGame.goals.length);
-       // if(currGoal.goals == currGoal.goals){
-        GameUtils.addGameGoals(currGame);
         for(Goal currGoal: currGame.goals){
            System.out.println(currGoal.theTime + "mins by");
            System.out.println(currGoal.thePlayer.playerName);
            System.out.println(" of "+ currGoal.theTeam.teamName);  
         }
-        //}
-        
-       // System.out.println(theGoals.length);
-     //   System.out.println("Goal scored after "+ /* currGame.goals[0].theTime*/ + " mins by "+ /*currGame.goals[0].thePlayer.playerName + " of "+ currGame.goals[0].theTeam.teamName*/);
     }
     
         public static Team[] createTeams(){
@@ -48,10 +34,6 @@ public class League{
             team1.playerArray[1] = player2;
             team1.playerArray[2] = player3;
 
-            //  tea(player2);
-            //  team1.playerArray.add(player3);
-           // team1.playerArray = new {player1, player2, player3};
-
             Team team2 = new Team();
             team2.teamName = "The Reds";
 
@@ -66,7 +48,6 @@ public class League{
              team2.playerArray[0] =player4;
              team2.playerArray[1] =player5;
              team2.playerArray[2] =player6;
-             //team2.playerArray = {player4, player5, player6};
             
             Team[] theTeams = {team1, team2};
             return theTeams;
@@ -82,6 +63,4 @@ public class League{
               return theGames;
         }
 
-       
-    
 }
