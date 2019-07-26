@@ -8,15 +8,9 @@ public class League{
         Team[] theTeams = createTeams();
         Game[] theGames = createGames(theTeams);
         Game currGame = theGames[0];
-
         currGame.playGame();
-
-        for(Goal currGoal: currGame.goals){
-           System.out.println(currGoal.theTime + "mins by");
-           System.out.println(currGoal.thePlayer.playerName);
-           System.out.println(" of "+ currGoal.theTeam.teamName);  
-        }
-    }
+        System.out.println(currGame.getDescription());
+           }
     
         public static Team[] createTeams(){
             Team team1 = new Team();

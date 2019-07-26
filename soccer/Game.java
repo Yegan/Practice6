@@ -18,4 +18,19 @@ public class Game{
 
         GameUtils.addGameGoals(this);
     }
+
+    public String getDescription(){
+         StringBuilder returnString = new StringBuilder();
+
+         for(Goal currGoal: this.goals){
+           returnString.append(currGoal.theTime + " mins by " + 
+                               currGoal.thePlayer.playerName + 
+                               " of "+ currGoal.theTeam.teamName +
+                               "\n");
+        
+             
+        }
+        return returnString.toString();
+
+    }
 }
