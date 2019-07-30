@@ -17,11 +17,11 @@ public class League{
             team1.teamName = "The Greens";
 
             Player player1 = new Player();
-            player1.playerName = "George Eliot";
+            player1.setPlayerName("George Eliot");
             Player player2 = new Player();
-            player2.playerName ="Graham Green";
+            player2.setPlayerName("Graham Green");
             Player player3 = new Player();
-            player3.playerName ="Geoffrey Chaucer";
+            player3.setPlayerName("Geoffrey Chaucer");
             
             team1.playerArray = new Player[3];
             team1.playerArray[0] = player1;
@@ -32,11 +32,11 @@ public class League{
             team2.teamName = "The Reds";
 
             Player player4 = new Player();
-            player4.playerName = "Robert Service";
+            player4.setPlayerName("Robert Service");
             Player player5 = new Player();
-            player5.playerName = "Robbie Burns";
+            player5.setPlayerName("Robbie Burns");
             Player player6 = new Player();
-            player6.playerName = "Rafael Sabatini";
+            player6.setPlayerName("Rafael Sabatini");
             
              team2.playerArray = new Player[3];
              team2.playerArray[0] =player4;
