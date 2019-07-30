@@ -6,9 +6,9 @@ public class Game{
     public Team awayTeam;
     public Goal[] goals;
 
-    public void playGame(){
+    public void playGame(int maxGoals){
         // Determine how many goals will be scored
-        int numberOfGoals = (int)(Math.random()*7); 
+        int numberOfGoals = (int)(Math.random()*(maxGoals + 1)); 
 
         // Create a place to store the goals that will be scored
         Goal[] theGoals = new Goal[numberOfGoals];
@@ -17,6 +17,10 @@ public class Game{
         this.goals = theGoals;
 
         GameUtils.addGameGoals(this);
+    }
+
+    public void playGame(){
+        playGame(6);
     }
 
     public String getDescription(){

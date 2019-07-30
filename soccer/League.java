@@ -4,15 +4,15 @@ import utility.GameUtils;
 public class League{
     
     public static void main(String[] args){
-    
-        Team[] theTeams = createTeams();
-        Game[] theGames = createGames(theTeams);
+        League theLeague = new League();
+        Team[] theTeams = theLeague.createTeams();
+        Game[] theGames = theLeague.createGames(theTeams);
         Game currGame = theGames[0];
         currGame.playGame();
         System.out.println(currGame.getDescription());
            }
     
-        public static Team[] createTeams(){
+        public Team[] createTeams(){
             Team team1 = new Team();
             team1.teamName = "The Greens";
 
@@ -49,7 +49,7 @@ public class League{
 
         
             
-          public static Game[] createGames(Team[] theTeams){
+          public Game[] createGames(Team[] theTeams){
               Game theGame = new Game();
               theGame.homeTeam = theTeams[0];
               theGame.awayTeam = theTeams[1];
