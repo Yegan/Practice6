@@ -29,7 +29,7 @@ public class Game{
          for(Goal currGoal: this.goals){
            returnString.append(currGoal.theTime + " mins by " + 
                                currGoal.thePlayer.getPlayerName() + 
-                               " of "+ currGoal.theTeam.teamName +
+                               " of "+ currGoal.theTeam.getTeamName() +
                                "\n");
         
              

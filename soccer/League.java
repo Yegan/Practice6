@@ -14,7 +14,7 @@ public class League{
     
         public Team[] createTeams(){
             Team team1 = new Team();
-            team1.teamName = "The Greens";
+            team1.setTeamName("The Greens");
 
             Player player1 = new Player();
             player1.setPlayerName("George Eliot");
@@ -29,7 +29,7 @@ public class League{
             team1.playerArray[2] = player3;
 
             Team team2 = new Team();
-            team2.teamName = "The Reds";
+            team2.setTeamName("The Reds");
 
             Player player4 = new Player();
             player4.setPlayerName("Robert Service");
